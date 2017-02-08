@@ -16,7 +16,8 @@ class ClickedTopic extends Component {
 
     this.state = {
       topics: [],
-      idea: []
+      idea: [],
+      showUrl: false
     }
   }
 // once component mounts, update state of topics and idea
@@ -75,6 +76,14 @@ deleteEntry(e) {
     });
 }
 
+generateLink(e) {
+  e.preventDefault();
+  console.log('link is', window.location.href);
+  this.setState({
+    showUrl: !this.state.showUrl
+  });
+}
+
   render() {
 // render each new state in a component
     const topics = this.state.topics.map(topic => {
@@ -106,8 +115,13 @@ deleteEntry(e) {
           </div>
           <Button className="saveButton" onClick={ this.deleteEntry.bind(this) }>
 
-            Delete
+            Delete Topic
           </Button>
+          <Button className="saveButton" onClick={ this.generateLink.bind(this) }>
+
+            Generate Link
+          </Button>
+          <div className={this.state.showUrl ? '' : 'hideUrl'}><input value={window.location.href} type="text"/></div>
         </div>
       </Col>
         <Col xs={1}/>

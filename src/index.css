@@ -86,13 +86,13 @@ h2.header{
 }
 #topicsDiv {
   background-color: rgba(244,244,244,.6);
-  margin-top: 10px;
+  margin-top: 0px;
   border-radius: 5px;
  }
 .ideaName {
   border-radius: 5px;
   clear: right;
-  margin: 1px 0 33px 0;
+  margin: 0 0 10px 0;
 }
 .idea-title-header {
   background-color: rgba(244,244,244,.6);
@@ -102,7 +102,7 @@ h2.header{
   font-size: 15px;
   text-align: left;
   padding: 10px;
-  margin: 25px -55px -10px -8px;
+  margin: 20px -55px 0 -8px;
 }
 .ideasContainer {
   overflow: hidden;
@@ -146,27 +146,22 @@ h2.header{
 .voteContainer {
   float: left;
   clear: left;
-  margin: 10px 0 10px 0;
+  /*margin: 10px 0 10px 0;*/
 }
 .upVoteIcon {
-  font-size: 15px;
+  font-size: 25px;
   margin: 2px;
 }
-.upVoteIcon:hover {
-  font-size: 15px;
-  margin: 2px;
-  color: #3E88FB;
-}
+
 .downVoteIcon {
-  font-size: 15px;
+  font-size: 25px;
   margin: 2px;
 }
-.downVoteIcon:hover {
-  color: #F67445;
-}
+
 .upVoteText {
   font-size: 15px;
-  margin: -8px 0 -8px 5px;
+  margin: -8px 0 -8px 0;
+  line-height: 18px;
 }
 .signOutColor {
   background-color: #26547C;
@@ -237,4 +232,8 @@ h2.header{
   padding-top: 0;
   background-color: #78909B;
   color: #ffffff;
+}
+
+.hideUrl {
+  display: none;
 }

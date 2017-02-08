@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import LoginButton from './LoginButton';
+import FBLoginButton from './FBLoginButton';
 import SearchTopics from './SearchTopics';
 import { Col } from 'react-bootstrap';
 import {firebase} from '../utils/firebase';
@@ -8,6 +9,8 @@ import Topics from './Topics';
 import SimpleMenu from './SimpleMenu';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import UserPhoto from './UserPhoto';
+
+
 import { Scrollbars } from 'react-custom-scrollbars';
 import Button from 'muicss/lib/react/button';
 
@@ -23,8 +26,7 @@ class Home extends Component {
   componentWillMount() {
     firebase.auth().onAuthStateChanged(user => {
       if (user) {
-        // console.log('Logged in:', user);
-console.log('user is', firebase.auth().currentUser.uid);
+        console.log('Logged in:', user);
         this.setState({ user });
       } else {
         this.setState({ user: {} });
@@ -74,7 +76,7 @@ console.log('user is', firebase.auth().currentUser.uid);
     </div>;
 
     } else {
-      return <LoginButton>Log in with GitHub</LoginButton>;
+      return <div><LoginButton>Log in with GitHub</LoginButton><FBLoginButton>Log in with Facebook</FBLoginButton></div>
     }
 
     }
