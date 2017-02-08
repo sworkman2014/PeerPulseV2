@@ -1,18 +1,28 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './index.css';
+import { Col } from 'react-bootstrap';
+import { Link } from 'react-router';
+import Background from '../images/newestloog.png';
+import Button from 'muicss/lib/react/button';
 
 class App extends Component {
+
   render() {
+
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className="background">
+          <Col xs={1}/>
+            <Col xs={10} className="centeredContainer">
+            <img src={ Background } alt="background" className="logoImage"/>
+            <h1 id="landing-header" className="landingHeader">PeerPulse</h1>
+            <h3>A smarter way to share ideas</h3>
+            <Link to="/home">
+              <Button id="landing-button" className="landingButton" variant="raised" color="accent">
+                <h2 className="header">get started</h2>
+              </Button>
+            </Link>
+            </Col>
+          <Col xs={1}/>
       </div>
     );
   }
