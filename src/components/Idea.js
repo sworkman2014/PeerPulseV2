@@ -8,7 +8,7 @@ class Idea extends Component {
       <div id="topicsDiv">
 
       <Col xs={9} className="ideaName">
-          <h4 className="idea-title-header">{this.props.ideaObject}</h4>
+          <div className="idea-title-header"><h4 id="ideas">{this.props.ideaObject}</h4></div>
     </Col>
 
     </div>

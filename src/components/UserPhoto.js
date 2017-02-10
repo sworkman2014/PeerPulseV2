@@ -26,7 +26,7 @@ class UserPhoto extends Component {
 
   render(){
     return(
-      <div>
+      <div id="userPhoto">
         <img className="userPhoto img-circle" src={ this.state.imgurl } alt="user"/>
       </div>
     )

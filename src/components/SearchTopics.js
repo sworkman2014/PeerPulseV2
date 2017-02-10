@@ -23,17 +23,18 @@ searchTopics(event){
   render() {
     return (
       <div>
-      <form>
-      <input type="text" name="search" onKeyUp={this.searchTopics.bind(this)} placeholder="Search.."/>
-      </form>
+
+      <input id="search-text-box" type="text" name="search" onKeyUp={this.searchTopics.bind(this)} placeholder="Search topics by user ID"/>
+
       <Link to={"/publictopics/"+ this.state.searchText}>
-      <Button className="saveButton">
-      <form>
-      <input
-        type="submit"
-        value="Search" />
-      </form>
-      </Button>
+        <Button className="savedButton">
+            <form>
+                <input style={{color: 'white'}}
+                  type="submit"
+                  value="Search"
+                />
+            </form>
+        </Button>
       </Link>
       <PublicTopics/>
     </div>

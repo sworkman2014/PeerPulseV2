@@ -8,6 +8,8 @@ import { firebase } from '../utils/firebase';
 import { Col } from 'react-bootstrap';
 import Button from 'muicss/lib/react/button';
 import { hashHistory } from 'react-router';
+import CopyToClipboard from 'react-copy-to-clipboard';
+
 
 // defines state as empty arrays
 class ClickedTopic extends Component {
@@ -17,9 +19,22 @@ class ClickedTopic extends Component {
     this.state = {
       topics: [],
       idea: [],
-      showUrl: false
+      ideas:[/*{
+        title: 'idea1',
+        votes: 0
+      }*/],
+      showUrl: false,
+      url: window.location.href,
+      copied: false
     }
   }
+
+  // reorderIdeas(newIdeas){
+  //   console.log('heller', newIdeas);
+  //   // this.setState({
+  //   // })
+  // reorder={this.reorderIdeas.bind(this)}
+  // }
 // once component mounts, update state of topics and idea
   componentDidMount(){
     var firebaseId = this.props.params.id;
@@ -105,7 +120,7 @@ generateLink(e) {
         </div>
         <Col xs={1}/>
         <Col xs={10} className="centeredContainer">
-        <h1>{ topics }</h1>
+        { topics }
         <div className="col-xs-12 ideasContainer">
           <div className="voteContainer">
             { votes }
@@ -113,16 +128,27 @@ generateLink(e) {
           <div className="ideaName">
             { idea }
           </div>
-          <Button className="saveButton" onClick={ this.deleteEntry.bind(this) }>
+          </div>
+          <div id="search-text-box" className={this.state.showUrl ? '' : 'hideUrl'}>
+            <p style={{margin: 0}} className="header">Share this topic!</p>
+            <input style={{width: '100%'}} id="search-url-box" value={this.state.url} onChange={({target: {value}}) => this.setState({value, copied: false})} type="text"/>
+          </div>
+          <div>
 
-            Delete Topic
-          </Button>
-          <Button className="saveButton" onClick={ this.generateLink.bind(this) }>
+                    <CopyToClipboard text={this.state.url}
+                       onCopy={() => this.setState({copied: true})}>
+                       <button className="savedButton" style={{marginTop: 40}}>copy link</button>
+                     </CopyToClipboard>
 
-            Generate Link
+                     {this.state.copied ? <span style={{color: 'red'}}>Copied.</span> : null}
+                   </div>
+
+          <Button className="deleteButton" onClick={ this.deleteEntry.bind(this) }>
+            <span className="header">Delete Topic</span>
           </Button>
-          <div className={this.state.showUrl ? '' : 'hideUrl'}><input value={window.location.href} type="text"/></div>
-        </div>
+
+
+
       </Col>
         <Col xs={1}/>
         </div>

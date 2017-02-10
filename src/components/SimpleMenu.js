@@ -10,7 +10,7 @@ import AppBar from 'muicss/lib/react/appbar';
 class SimpleMenu extends Component {
   render(){
     return(
-      <AppBar>
+      <AppBar className="appbar">
         <div>
        <IconMenu
        iconButtonElement={<IconButton><MoreHorizIcon /></IconButton>}
@@ -27,6 +27,7 @@ class SimpleMenu extends Component {
        </div>
        </IconMenu>
        </div>
+
      </AppBar>
     )
   }

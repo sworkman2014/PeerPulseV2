@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './index.css';
 import { Col } from 'react-bootstrap';
 import { Link } from 'react-router';
 import Background from '../images/newestloog.png';
@@ -14,11 +13,12 @@ class App extends Component {
           <Col xs={1}/>
             <Col xs={10} className="centeredContainer">
             <img src={ Background } alt="background" className="logoImage"/>
-            <h1 id="landing-header" className="landingHeader">PeerPulse</h1>
-            <h3>A smarter way to share ideas</h3>
+            <span className="peer">Peer</span>
+            <span className="pulse">Pulse</span>
+            <h3 id="tagline">A smarter way to share ideas</h3>
             <Link to="/home">
-              <Button id="landing-button" className="landingButton" variant="raised" color="accent">
-                <h2 className="header">get started</h2>
+              <Button id="landing-button" variant="raised" color="accent">
+                <span className="header">get started</span>
               </Button>
             </Link>
             </Col>

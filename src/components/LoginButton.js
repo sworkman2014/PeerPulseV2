@@ -15,14 +15,12 @@ class LoginButton extends Component {
 
   render() {
     return (
-      <div>
-      <Col xs={2}/>
-      <Col xs={10}>
+      <div id="center">
         <br/>
         <br/>
+        
       <Button onClick={ this.handleClick.bind(this) }
-        id="loginButton" className="landingButton centeredContainer">{ this.props.children }</Button>
-      </Col>
+        id="loginButton">{ this.props.children }</Button>
     </div>
     )
   }

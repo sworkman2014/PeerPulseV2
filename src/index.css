@@ -1,28 +1,17 @@
 body {
-  background: url('../images/background.png');
+  background: url('../images/crowdbackground.png')no-repeat center center fixed;
   width: 100%;
   height: 100vh;
   background-size: cover;
   background-position: center;
+  margin: none;
 }
+
 a {
-  color: #26547C;
-}
-a:hover {
-  background-color: #E9168C;
+  color: inherit;
   text-decoration: none;
 }
-.landingButton {
-  text-align: center;
 
-  padding-bottom: 50px;
-  padding-top: 20px;
-  background-color: #78909B;
-
-}
-.landingbutton:hover {
-  background-color: #011627;
-}
 .newProjectBtn {
   text-align: center;
   margin: 25px 0 25px 0;
@@ -31,13 +20,19 @@ a:hover {
   height: 50px;
   width: 280px;
 }
-.header{
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  text-align: center;
+
+.header {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
+
 h2.header{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   text-align: center;
   font-size: 20px;
   color: white;
@@ -46,20 +41,25 @@ h2.header{
   padding-right: 10px;
   margin: 0;
 }
+
 .centeredContainer {
   text-align: center;
 }
+
 .landingTitle{
   margin-top: 50px;
 }
+
 .logoImage {
-  margin-top: 110px;
+  margin-top: 140px;
   margin-bottom: 20px;
-  width: 100%;
+  width: 80%;
 }
+
 .tabs {
   margin: 50px 0;
 }
+
 .topicHeader{
   height: 20vh;
   display: flex;
@@ -67,42 +67,71 @@ h2.header{
   align-items: center;
   font-size: 24px;
 }
+
 .topic-title {
-  font-family: 'Roboto', sans-serif;
-  background-color: #FCFCFC;
-  border-radius: 5px;
-  color: black;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  background-color: rgba(255, 255, 255, 0.30);
+  color: #fff;
   font-size: 17px;
   padding: 10px;
   text-align: center;
+  /*border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;*/
+  margin: 0 0 5px 0;
+    box-shadow: 0px 10px 10px -10px rgba(0, 0, 0, 0.3);
 }
+
 .topic-title-header {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   border-radius: 5px;
-  color: black;
+  color: rgba(249, 159, 34, 0.8);
   font-size: 20px;
-  padding: 10px;
+  padding: 0;
   text-align: center;
+  margin-top: 10px;
+  margin-bottom: 0;
 }
-#topicsDiv {
-  background-color: rgba(244,244,244,.6);
+#topicDiv {
+  background-color: #ffffff;
   margin-top: 0px;
   border-radius: 5px;
+  box-shadow: 0px 10px 10px -10px rgba(0, 0, 0, 0.3);
+text-align:
  }
 .ideaName {
   border-radius: 5px;
   clear: right;
   margin: 0 0 10px 0;
+  box-shadow: 0px 10px 10px -10px rgba(0, 0, 0, 0.3);
 }
 .idea-title-header {
-  background-color: rgba(244,244,244,.6);
-  font-family: 'Roboto', sans-serif;
-  border-radius: 5px;
+  background-color: rgba(255,255,255,.5);
+  font-family: 'Poppins', sans-serif;
   color: black;
   font-size: 15px;
   text-align: left;
   padding: 10px;
-  margin: 20px -55px 0 -8px;
+  height: 7vh;
+  margin: 0 auto;
+  margin-bottom: 1.15em;
+  margin-top: 1em;
+  width: 80%;
+}
+.idea-title-header {
+  background-color: rgba(255,255,255,.5);
+  font-family: 'Poppins', sans-serif;
+  color: black;
+  vertical-align: center;
+  font-weight: 200;
+  font-size: 15px;
+  text-align: left;
+  padding: 10px;
+  height: 7vh;
+  margin: 0 auto;
+  margin-bottom: 1.15em;
+  margin-top: 1em;
+  width: 80%;
 }
 .ideasContainer {
   overflow: hidden;
@@ -112,11 +141,12 @@ h2.header{
 .userPhoto{
   max-width: 130px;
   margin-top: 10px;
-  background-color: white;
+  margin-bottom: 0;
+  background-color: none;
   padding: 3px;
 }
 .add-topic-info {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 20px;
   text-align: center;
   padding: 10px;
@@ -124,7 +154,8 @@ h2.header{
 }
 .form-control {
   margin: 8px;
-  width: 395px;
+  width: 80%;
+  height: 5vh;
   text-align: center;
 }
 .save {
@@ -146,6 +177,7 @@ h2.header{
 .voteContainer {
   float: left;
   clear: left;
+  margin-left: 40px;
   /*margin: 10px 0 10px 0;*/
 }
 .upVoteIcon {
@@ -162,6 +194,8 @@ h2.header{
   font-size: 15px;
   margin: -8px 0 -8px 0;
   line-height: 18px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
 }
 .signOutColor {
   background-color: #26547C;
@@ -169,21 +203,24 @@ h2.header{
 .menuButto:hover {
   background-color: #011627;
 }
-.form-control {
-  width: 100%;
 
-  margin-left: 0;
-}
 .centerItems {
   text-align: center;
   margin: 0auto;
 }
 #noMargin {
-  margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    margin: 0;
+    /*background-color: rgba(255, 255, 255, 0.8);*/
+    /* border: 1px solid #fff; */
+    width: 80%;
+    color: #fff;
+    display: inline-block;
 }
 .landingHeader {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
   text-align: center;
   font-size: 50px;
   margin-top: 30px;
@@ -196,14 +233,27 @@ h2.header{
   margin-top: 20px;
 }
 .mui-appbar{
-  background-color: rgba(255, 255, 255, 0.37);
+  background-color: rgba(255, 255, 255, 0.27);
 }
 #noPadding {
   padding-top: 0px;
   padding-bottom: 0px;
 }
-#landing-button{
-  margin-top: 50px;
+#landing-button {
+    display: inline-block;
+    padding: 15px 30px;
+    border: 1.4px solid;
+    color: rgba(255, 255, 255, 0.87);
+    text-decoration: none;
+    margin: 0px 10px 10px 0;
+    -webkit-transition: all .6s;
+    transition: all .6s;
+    min-width: 100px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.000001);
+    border-radius: 15px;
+    width: 65%;
+    height: 10vh;
 }
 .mui-btn--accent{
   margin-top: 50px;
@@ -223,17 +273,157 @@ h2.header{
   color: #26547c;
 }
 #loginButton {
-  margin: 100px, 100px, 100px, 100px;
-  color: 'white';
-}
-.saveButton {
+  display: inline-block;
+  padding: 15px 30px;
+  border: 1.4px solid;
+  color: rgba(255, 255, 255, 0.87);
+  text-decoration: none;
+  margin: 0 auto;
+  -webkit-transition: all .6s;
+  transition: all .6s;
+  min-width: 100px;
   text-align: center;
-  padding-bottom: 20px;
-  padding-top: 0;
-  background-color: #78909B;
+  background-color: #e62037;
+  border-radius: 15px;
+  width: 65%;
+  height: 10vh;
+}
+.savedButton {
+  background-color: rgba(255, 255, 255, 0.000001);
   color: #ffffff;
+  display: inline-block;
+  height: 5vh;
+  border: 1px solid #fff;
+  border-radius: 5px;
 }
 
-.hideUrl {
-  display: none;
+.appHeader {
+  text-align: center;
+  display: inline;
+  margin-left: 95px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+}
+
+.menuBar {
+  text-align: center;
+  clear: both;
+}
+
+.appBar{
+position: fixed;
+ top: 0;
+ left: 0;
+ z-index: 9999;
+ width: 100%;
+ height: 50px;
+ background-color: rgba(38, 34, 97, 0.8);
+ display: block;
+ box-shadow: 0px 10px 10px -10px rgba(0, 0, 0, 0.3);
+
+  }
+.addingButton {
+  text-align: center;
+  width: 100%;
+  padding-bottom: 50px;
+  padding-top: 20px;
+  background-color: rgba(230, 32, 55, 0.8);
+  border: none;
+  height: 10vh;
+  bottom: 0;
+  position:absolute;
+}
+
+.saveButton {
+  text-align: center;
+  width: 100%;
+  padding-bottom: 50px;
+  padding-top: 20px;
+  background-color: rgba(230, 32, 55, 0.8);
+  border: none;
+  height: 10vh;
+  margin-top: 40px;
+  bottom: 0;
+}
+.pulse {
+  font-family: 'Poppins', sans-serif;
+  font-size: 35px;
+  color: rgba(255, 255, 255, 0.90);
+  font-weight: 700;
+  margin-botton: 5px;
+}
+.peer {
+font-family: 'Poppins', sans-serif;
+font-size: 35px;
+color: rgba(255, 255, 255, 0.90);
+font-weight: 100;
+margin-botton: 5px;
+}
+
+#tagline{
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.90);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+  margin: 0 0 110px 0;
+}
+
+.topicsDiv{
+  width: 80%;
+
+  display: inline-block;
+}
+
+#userPhoto{
+  margin-bottom: 0;
+}
+
+#search{
+  display: inline;
+  margin-top: 10px;
+}
+
+#search-text-box{
+  width: 60%;
+  height: 4vh;
+  margin: 0 auto;
+}
+
+#search-url-box{
+  width: 90%;
+  height: 4vh;
+  margin: 0 auto;
+}
+
+#center{
+  margin: 0 auto;
+  align-items: center;
+}
+
+.scrollbars{
+  height: 150;
+  margin-bottom: 20px;
+}
+
+#votesComponentContainer{
+  margin-top: 10px;
+  margin-bottom: .5em;
+}
+.deleteButton {
+  text-align: center;
+  width: 60%;
+  padding-bottom: 50px;
+  padding-top: 20px;
+  background-color: #e62037;
+  border: none;
+  height: 7vh;
+  margin-top: 20px;
+}
+#ideas{
+  margin-left: 50px;
+  margin-bottom: 40px;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  vertical-align: middle;
 }

@@ -9,7 +9,7 @@ import Topics from './Topics';
 import SimpleMenu from './SimpleMenu';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import UserPhoto from './UserPhoto';
-
+import { StickyContainer, Sticky } from 'react-sticky';
 
 import { Scrollbars } from 'react-custom-scrollbars';
 import Button from 'muicss/lib/react/button';
@@ -36,7 +36,7 @@ class Home extends Component {
 //if someone is not logged in, show login..if not show logout button and name of person,
   sessionButton() {
     if (!firebase.auth().currentUser) {
-      return <LoginButton id="loginButton">Log in with GitHub</LoginButton>;
+      return <LoginButton id="login-button">Log in with GitHub</LoginButton>;
     }
   }
 
@@ -47,36 +47,54 @@ class Home extends Component {
     if (firebase.auth().currentUser){
       return<div>
       <div>
+
       <MuiThemeProvider>
         <SimpleMenu />
       </MuiThemeProvider>
+
       </div>
       <Col xs={1}/>
       <Col xs={10} className="centeredContainer">
+
       <div>
         { this.sessionButton() }
-        <h1 className="header">{ welcomeMessage }</h1>
-        <UserPhoto />
+        <h3 className="header">{ welcomeMessage }</h3>
+        <UserPhoto id="userPhoto" />
         <br/>
       </div>
-<h2 id="noMargin">Your topics:</h2>
-      <Scrollbars
-      style={{ height: 250 }}>
-      <div><Topics /></div>
+<h3 id="noMargin">YOUR TOPICS:</h3>
+      <Scrollbars className="scrollbars"
+      style={{ height: 200 }}>
+      <div className="topicsDiv"><Topics /></div>
       </Scrollbars>
+      <SearchTopics id="search"/>
+    </Col>
       <Link to="/add">
-      <Button className="landingButton" variant="raised">
+      <Button className="addingButton" variant="raised">
         <h2 className="header">add topic</h2>
       </Button>
     </Link>
-    <SearchTopics/>
-    </Col>
+
+
       <Col xs={1}/>
 
     </div>;
 
     } else {
-      return <div><LoginButton>Log in with GitHub</LoginButton><FBLoginButton>Log in with Facebook</FBLoginButton></div>
+      return<div>
+        <Col xs={1}/>
+        <Col xs={10}>
+          <div id="center">
+        <LoginButton id="login-button">
+          <h2 className="header">GitHub Login</h2>
+        </LoginButton>
+        <FBLoginButton>
+          <h2 className="header">Facebook Login</h2>
+        </FBLoginButton>
+          </div>
+      </Col>
+      <Col xs={1}/>
+</div>
     }
 
     }

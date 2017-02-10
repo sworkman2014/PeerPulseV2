@@ -10,7 +10,7 @@ class Votes extends Component {
         votes: this.props.voteObject,
         votedUp: [],
         votedDown: []
-        // votedDown: []
+
       }
     }
 
@@ -27,11 +27,12 @@ class Votes extends Component {
       // console.log('data is: ', data.val());
       for(let ideaKey in data.val()){
         var ideaRef = firebase.database().ref('/topics/' + firebaseId + '/idea/'+ideaKey);
+        var dataObject = data.val();
         var ideaValue = data.val()[ideaKey];
         var hasVotedUp = ideaValue.votedUp || [];
 
         if(hasVotedUp.indexOf(user) === -1){
-          console.log('in conditional')
+          // console.log('in conditional')
 
           self.setState({
             votes: ++self.state.votes,
@@ -44,8 +45,28 @@ class Votes extends Component {
           })
         }
       }
+    // console.log('the index is', ideaValue);
+    // console.log('the objects are', dataObject );
     });
-    }
+    // ideaLocation.once('value', function(snapshot){
+    //   console.log('data is', snapshot.val());
+    //     function compare(a,b) {
+    //     if (a.votes < b.votes)
+    //       return -1;
+    //     if (a.votes > b.votes)
+    //       return 1;
+    //     return 0;
+    //     }
+    //
+    //     console.log('sorted array is', snapshot.val().sort(compare).reverse());
+    //     ideaLocation.update(snapshot.val().sort(compare).reverse())
+    //     self.props.reorder(snapshot.val().sort(compare).reverse())
+    //     // return false;
+    //     // return snapshot.val().sort(compare).reverse();
+    // })
+
+
+}
 
     handleDownClick(e) {
       var ideaId = this.props.ideaKey
@@ -84,10 +105,10 @@ class Votes extends Component {
 
       return (
 
-        <div>
-        <p className="upVoteIcon" onClick={ this.handleUpClick.bind(this)}>▲</p>
+        <div id="votesComponentContainer">
+        <p className="upVoteIcon" onClick={ this.handleUpClick.bind(this)}>△</p>
          <h1 className="upVoteText" >{this.state.votes}</h1>
-         <p className="downVoteIcon" onClick={ this.handleDownClick.bind(this)}>▼</p>
+         <p className="downVoteIcon" onClick={ this.handleDownClick.bind(this)}>▽</p>
         </div>
     )
   }

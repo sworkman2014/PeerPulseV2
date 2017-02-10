@@ -45,14 +45,14 @@ class Topics extends Component {
     })
 
     return (
-      <section id="topicsDiv" className="container-fluid">
+      <section>
 
-        <div className="row">
+
 
         { topics }
 
 
-        </div>
+
       </section>
     )
   }
