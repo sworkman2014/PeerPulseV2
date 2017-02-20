@@ -88,20 +88,19 @@ class AddTopic extends Component {
         className="form-control"
         type="text"
         ref="topicTitle"
-        placeholder="Add an Activity &raquo; ex: Where to eat?" />
+        placeholder="Add topic &raquo; ex: Where should we drink tonight?" />
     </form>
 
-    <p className="add-topic-info">Add some ideas:</p>
+    <p className="add-topic-info">Add your ideas:</p>
 
     <form>
         <input
         className="form-control"
         type="text"
         ref="idea1"
-        placeholder="Add an idea" />
+        placeholder="ideas.." />
     </form>
 
-    <Welcome>
     <form>
       <input
         className="form-control"
@@ -133,7 +132,7 @@ class AddTopic extends Component {
               ref="idea5"
               placeholder="..." />
             </form>
-        </Welcome>
+
 
           <Button className="saveButton" onClick={ this.handleSubmit.bind(this) }>
 

@@ -21,8 +21,8 @@ class SimpleMenu extends Component {
        <Link to="/home"><MenuItem primaryText="Home" /></Link>
        <Link to="/add"><MenuItem className='menuButton' primaryText="Add Topic" /></Link>
 
-       <LogoutButton>
-       <MenuItem primaryText="Sign Out" style={{color: 'white', width: '90px', height: '10px', padding: '0'}}/>
+       <LogoutButton className="savedButton">
+       <MenuItem className="savedButton" primaryText="Sign Out" style={{color: 'white', width: '90px', height: '10px', padding: '0'}}/>
        </LogoutButton>
        </div>
        </IconMenu>

@@ -67,7 +67,7 @@ class Home extends Component {
       style={{ height: 200 }}>
       <div className="topicsDiv"><Topics /></div>
       </Scrollbars>
-      <SearchTopics id="search"/>
+
     </Col>
       <Link to="/add">
       <Button className="addingButton" variant="raised">
@@ -111,3 +111,6 @@ class Home extends Component {
 }
 
 export default Home;
+
+
+      // <SearchTopics id="search"/>

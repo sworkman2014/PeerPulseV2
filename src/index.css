@@ -53,7 +53,7 @@ h2.header{
 .logoImage {
   margin-top: 140px;
   margin-bottom: 20px;
-  width: 80%;
+  width: 300px;
 }
 
 .tabs {
@@ -150,7 +150,9 @@ text-align:
   font-size: 20px;
   text-align: center;
   padding: 10px;
-  margin: 10px;
+  margin-top: 4px;
+  margin-bottom: 5px;
+  color: #fff;
 }
 .form-control {
   margin: 8px;
@@ -183,11 +185,13 @@ text-align:
 .upVoteIcon {
   font-size: 25px;
   margin: 2px;
+  color: #ffffff;
 }
 
 .downVoteIcon {
   font-size: 25px;
   margin: 2px;
+  color: #ffffff;
 }
 
 .upVoteText {
@@ -196,9 +200,11 @@ text-align:
   line-height: 18px;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
+  color: #ffffff;
 }
 .signOutColor {
-  background-color: #26547C;
+  background-color: #e62037;
+  border-style: none;
 }
 .menuButto:hover {
   background-color: #011627;
@@ -342,7 +348,7 @@ position: fixed;
   background-color: rgba(230, 32, 55, 0.8);
   border: none;
   height: 10vh;
-  margin-top: 40px;
+  margin-top: 30px;
   bottom: 0;
 }
 .pulse {
@@ -396,7 +402,7 @@ margin-botton: 5px;
 }
 
 #center{
-  margin: 0 auto;
+  text-align:center;
   align-items: center;
 }
 
@@ -421,7 +427,8 @@ margin-botton: 5px;
 }
 #ideas{
   margin-left: 50px;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
+  margin-top: 5px;
   align-items: center;
   font-family: 'Poppins', sans-serif;
   font-weight: 200;

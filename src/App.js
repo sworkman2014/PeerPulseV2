@@ -13,6 +13,7 @@ class App extends Component {
           <Col xs={1}/>
             <Col xs={10} className="centeredContainer">
             <img src={ Background } alt="background" className="logoImage"/>
+            <br/>
             <span className="peer">Peer</span>
             <span className="pulse">Pulse</span>
             <h3 id="tagline">A smarter way to share ideas</h3>
